@@ -25,10 +25,9 @@ const MarvelTheme = createTheme({
         h1: {
             fontFamily: 'Bungee',
             fontSize:  '96px',
-            fontStyle: 'light',
             fontWeight: 400,
             letterSpacing:  '-1.5px',
-            textAlign: 'left'
+            textAlign: 'left'            
         },
         h2: {
             fontSize: '60px',
@@ -58,5 +57,13 @@ const MarvelTheme = createTheme({
         }
     }
 });
+
+// Responsive rules
+MarvelTheme.typography.h1 = {
+    [MarvelTheme.breakpoints.down('md')]: {
+        ...MarvelTheme.typography.h1,
+        fontSize: '34px'
+    }
+}
 
 export default MarvelTheme;

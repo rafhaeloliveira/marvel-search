@@ -1,5 +1,5 @@
 import { Search as SearchIcon } from "@mui/icons-material";
-import { Button, Grid, InputAdornment, Paper, TextField } from "@mui/material";
+import { Button, Grid, InputAdornment, Paper, TextField, Typography } from "@mui/material";
 import { FC, useState } from "react";
 
 import { makeStyles  } from '@mui/styles';
@@ -72,6 +72,7 @@ const Search: FC = () => {
                 backgroundRepeat: 'no-repeat'
             }}
         >
+            <Typography variant="h1" color="rgba(255, 255, 255, 0.87)">MYSUPERHERO</Typography>
             <Paper 
                 elevation={2} 
                 sx={{
