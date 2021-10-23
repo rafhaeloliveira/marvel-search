@@ -1,4 +1,4 @@
-import { createTheme, makeStyles } from "@mui/material";
+import { createTheme } from "@mui/material";
 
 const MarvelTheme = createTheme({
     palette: {
@@ -60,6 +60,7 @@ const MarvelTheme = createTheme({
 
 // Responsive rules
 MarvelTheme.typography.h1 = {
+    ...MarvelTheme.typography.h1,
     [MarvelTheme.breakpoints.down('md')]: {
         ...MarvelTheme.typography.h1,
         fontSize: '34px'

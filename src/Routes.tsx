@@ -3,13 +3,12 @@ import { ThemeProvider } from "@mui/material";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 // Pages
-import Search from "./page/Search";
 import Results from "./page/Results";
+import Search from "./page/Search";
 
 // Provider
 import MarvelTheme from "./provider/ThemeProvider";
@@ -17,18 +16,18 @@ import MarvelTheme from "./provider/ThemeProvider";
 
 function Routes() {
   return (
-    <Router>
-      <ThemeProvider theme={MarvelTheme}>
-        <Switch>
-          <Route path="/" exact>
-            <Search />
-          </Route>
-          <Route path="/results" exact>
-            <Results />
-          </Route>
-        </Switch>
-      </ThemeProvider>
-    </Router>
+    <ThemeProvider theme={MarvelTheme}>
+      <Router>
+          <Switch>
+              <Route path="/" exact>
+                <Search />
+              </Route>
+              <Route path="/results" exact>
+                <Results />
+              </Route>
+          </Switch>
+      </Router>
+    </ThemeProvider>
   );
 }
 
